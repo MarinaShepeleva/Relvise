@@ -4,17 +4,146 @@
     min-height: 100%
     overflow: hidden
 ._container
-    max-width: 1146px
+    max-width: 1166px
     margin: 0 auto
+    padding: 0 10px
+body
+    background: #FAFAFA
 
-.header
+@import "header.sass"
 
-    &__menu
+.main
+    flex: 1 1 auto
+//-----------CONTENT-TOP-------------------------------------
+.content-top
+    width: 100%
+    min-height: 793px
+    background-image: url(/images/fon/background.jpg)
+    background-repeat: no-repeat
+    background-size: 100%
+    background-position: top
+    padding: 184px 0 0 0
 
-.menu
+    &__container
 
-    &__list
+        :not(:last-child)
+            margin-bottom: 35px
+    &__title
+        max-width: 509px
+        h1
+            font-weight: 800
+            font-size: 58px
+            line-height: 80px
+            letter-spacing: 0.2px
+            color: #252B42
+
+    &__text
+        max-width: 376px
+        p
+            font-weight: 500
+            font-size: 20px
+            line-height: 30px
+            letter-spacing: 0.2px
+            color: #737373
+    &__buttons
+
+.button
+    :not(:last-child)
+        margin-right: 10px
+
+    &__action
+        border: 1px solid #0D5C63
+        border-radius: 37px
+        padding: 10px 36px
+        font-size: 14px
+        line-height: 28px
+        text-align: center
+        letter-spacing: 0.2px
+        color: rgba(13, 92, 99, 1)
+        &:hover
+            background: #FF7B47
+            border-radius: 37px
+            border: none
+            color: rgba(255, 255, 255, 1)
+//--------SERVICES----------------------------------------------
+.services
+    margin-top: -111px
+    margin-bottom: 80px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px
+
+    @media ( max-width: 420px )
+        grid-template-columns: 1fr
+    &__item
+        background: #FFFFFF
+        box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07)
+        padding: 35px 40px
+        min-height: 242px
+        :not(:last-child)
+            margin-bottom: 10px
+        &:hover
+            cursor: pointer
+            background: #0D5C63
+            h1, p, svg
+                color: #FFFFFF
+            svg
+                stroke: #FFFFFF
+    &__icon
+
+    &__title
+        h1
+            font-size: 24px
+            line-height: 32px
+            letter-spacing: 0.1px
+            color: #252B42
+
+    &__text
+        p
+            font-weight: 500
+            font-size: 14px
+            line-height: 20px
+            letter-spacing: 0.2px
+            color: #737373
+//------------ADVANTAGES---------------------------------------------------------
+.advantages
+    margin-top: 50px
+    margin-bottom: 80px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 30px
 
     &__item
+        padding: 30px 40px
+        background: #FFFFFF
+        text-align: center
+        min-height: 209px
+        :not(:last-child)
+            margin-bottom: 10px
+    &__icon
 
-    &__link
+    &__value
+        font-size: 40px
+        line-height: 57px
+        letter-spacing: 0.2px
+        color: #252B42
+    &__text
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.1px
+        color: #737373
+
+.title-page
+    font-size: 40px
+    line-height: 57px
+    letter-spacing: 0.2px
+    color: #252B42
+    text-align: center
+.text-page
+    font-weight: 500
+    font-size: 14px
+    line-height: 20px
+    text-align: center
+    letter-spacing: 0.2px
+    color: #737373
+    text-align: center

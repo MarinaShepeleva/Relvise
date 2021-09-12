@@ -1,0 +1,36 @@
+.header
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    z-index: 50
+    &__container
+        display: flex
+        min-height: 104px
+
+    &__logo
+        margin-right: 132px
+        padding: 36px 0
+        a
+            font-size: 24px
+            line-height: 32px
+            letter-spacing: 0.1px
+            color: rgba(37, 43, 66, 1)
+
+    &__menu
+        padding: 40px 0
+.menu
+
+    &__list
+        display: flex
+        :not(:last-child)
+            margin-right: 21px
+    &__item
+        :hover
+            background-color: rgb(232,232,232)
+        a
+            font-size: 14px
+            line-height: 24px
+            text-align: center
+            letter-spacing: 0.2px
+            color: #737373
