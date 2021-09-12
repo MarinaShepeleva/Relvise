@@ -76,6 +76,13 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 ._container {
@@ -86,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background: #FAFAFA;
+  height: 100%;
 }
 
 .header {
@@ -304,6 +312,9 @@ body {
   overflow: hidden;
   min-height: 341px;
 }
+.card__item :not(:last-child) {
+  margin-bottom: 15px;
+}
 .card__item--title h1 {
   font-size: 16px;
   line-height: 24px;
@@ -322,4 +333,64 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+.footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 142px;
+  padding: 40px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer-top__title h1 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #252B42;
+  margin-bottom: 10px;
+}
+.footer-top__title p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.footer-top__button {
+  background: #FF7B47;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}
+
+.footer-list {
+  background: #17213C;
+  min-height: 272px;
+}
+
+.footer-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 74px;
+  padding: 25px;
+}
+.footer-bottom__text {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.link :not(:last-child) {
+  margin-right: 20px;
 }
