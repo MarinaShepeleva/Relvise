@@ -197,8 +197,7 @@ body {
   margin-bottom: 80px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
   grid-gap: 30px;
 }
 @media (max-width: 420px) {
@@ -241,37 +240,6 @@ body {
   color: #737373;
 }
 
-.advantages {
-  margin-top: 50px;
-  margin-bottom: 80px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-}
-.advantages__item {
-  padding: 30px 40px;
-  background: #FFFFFF;
-  text-align: center;
-  min-height: 209px;
-}
-.advantages__item :not(:last-child) {
-  margin-bottom: 10px;
-}
-.advantages__value {
-  font-size: 40px;
-  line-height: 57px;
-  letter-spacing: 0.2px;
-  color: #252B42;
-}
-.advantages__text {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.1px;
-  color: #737373;
-}
-
 .title-page {
   font-size: 40px;
   line-height: 57px;
@@ -288,4 +256,70 @@ body {
   letter-spacing: 0.2px;
   color: #737373;
   text-align: center;
+}
+
+.card {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(209px, 1fr));
+  grid-gap: 30px;
+}
+.card__item {
+  padding: 30px 40px;
+  background: #FFFFFF;
+  text-align: center;
+}
+.card__item :not(:last-child) {
+  margin-bottom: 10px;
+}
+.card__icon {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.card__value {
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+}
+.card__text {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #737373;
+}
+
+.card__item {
+  position: relative;
+  overflow: hidden;
+  min-height: 341px;
+}
+.card__item--title h1 {
+  font-size: 16px;
+  line-height: 24px;
+  etter-spacing: 0.1px;
+  color: #252B42;
+}
+.card__item--text p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.card__item--img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
