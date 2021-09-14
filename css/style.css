@@ -370,9 +370,33 @@ body {
   color: #FFFFFF;
 }
 
-.footer-list {
+.footer-body {
   background: #17213C;
   min-height: 272px;
+  padding: 50px 0;
+}
+.footer-body__container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 30px;
+}
+.footer-body__item h1 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footer-body__list :not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-body__link a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
 }
 
 .footer-bottom {

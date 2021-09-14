@@ -25,9 +25,35 @@
         text-align: center
         letter-spacing: 0.2px
         color: #FFFFFF
-.footer-list
+.footer-body
     background: #17213C
     min-height: 272px
+    padding: 50px 0
+    &__container
+        display: grid
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr))
+        grid-gap: 30px
+
+    &__item
+        h1
+            font-size: 16px
+            line-height: 24px
+            letter-spacing: 0.1px
+            color: #FFFFFF
+            margin-bottom: 20px
+
+    &__list
+        :not(:last-child)
+            margin-bottom: 10px
+    &__link
+
+        a
+            font-weight: 600
+            font-size: 14px
+            line-height: 24px
+            letter-spacing: 0.2px
+            color: #FFFFFF
+
 .footer-bottom
     display: flex
     justify-content: space-between
