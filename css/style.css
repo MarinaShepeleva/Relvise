@@ -151,7 +151,7 @@ body {
 .content-top {
   width: 100%;
   min-height: 793px;
-  background-image: url(../images/fon/background.jpg);
+  background-image: url(/images/fon/background.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top;
