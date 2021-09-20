@@ -70,6 +70,10 @@ body
             border-radius: 37px
             border: none
             color: rgba(255, 255, 255, 1)
+@media (max-width: 1250px)
+    .content-top
+        background-position: right
+
 @media (max-width: 385px)
     .button
         flex-direction: column
@@ -108,7 +112,7 @@ body
     &__title
         h1
             font-size: 24px
-            line-height: 32px
+            line-height: 133%
             letter-spacing: 0.1px
             color: #252B42
 
@@ -116,7 +120,7 @@ body
         p
             font-weight: 500
             font-size: 14px
-            line-height: 20px
+            line-height: 142%
             letter-spacing: 0.2px
             color: #737373
 //------------ADVANTAGES---------------------------------------------------------
@@ -126,6 +130,7 @@ body
     letter-spacing: 0.2px
     color: #252B42
     text-align: center
+    margin: 0 0 15px 0
 .text-page
     font-weight: 500
     font-size: 14px
@@ -165,6 +170,10 @@ body
         letter-spacing: 0.1px
         color: #737373
 
+@media ( max-width: 767px )
+    .card
+        margin-bottom: 40px
+
 //----------Practice---------------------------------------------------
 .practice
 
@@ -202,7 +211,10 @@ body
             left: 0
             bottom: 0
             width: 100%
-
+@media ( max-width: 767px )
+    .card
+        &__item
+            min-height: 250px
 @import "footer.sass"
 
 //---------Inform------------------------------------------------------
@@ -230,31 +242,48 @@ body
             object-fit: cover
             height: 100%
             width: 100%
-
+.content
     &__text
         flex: 1 1 auto
         margin-left: 100px/1046px*100%
-@media ( max-width: 767px )
-    .content
-        flex-direction: column-reverse
+
 .text
+    &__wrap
+        :not(:last-child)
+            margin: 0 0 30px 0
 
-    &__title
+        &__title
 
-    &__sub-title
-
-    &__list
+        &__sub-title
 
 .list
-    :not(:last-child)
-        margin: 0 0 10px 0
-    &__text
+    margin: 30px 0 0 0
+    &__item
         display: flex
+        margin: 0 0 30px 0
     &__logo
-        margin-right: 20px
+        width: 32px
+        height: 32px
+        margin: 0 20px 0 0
     &__title
+        font-size: 16px
+        line-height: 150%
+        letter-spacing: 0.1px
+        color: #252B42
+    &__text
 
-    &__sub-title
+@media ( max-width: 992px )
+    .content
+        &__text
+            margin-left: 20px
+@media ( max-width: 840px )
+    .list
+        margin: 20px 0 20px 0
+    .inform
+        padding: 50px 0
+        &__content
+            flex-direction: column-reverse
+            margin: 50px 0 0 0
 
 //---------Clients-------------------------------------------------------
 .clients
@@ -297,6 +326,7 @@ body
         flex: 0 1 50%
     &__form
         display: flex
+        background: #17213C
         justify-content: space-between
         flex: 0 1 50%
         max-width: 450px
@@ -343,11 +373,16 @@ body
     .subscribe
         &__input
             text-align: center
+            :not(:last-child)
+
         &__content
             padding: 20px 30px
         &__form
             flex-direction: column
             width: 100%
+            input
+                margin: 0 0 10px 0
+
 //--------Contacts------------------------------------------------------
 .contacts
 
@@ -370,15 +405,17 @@ body
             letter-spacing: 0.1px
     &__wrap
         min-height: 740px
+        padding: 80px 0
+
     &__cards
         display: flex
         justify-content: center
         flex-wrap: wrap
+        margin: 0 0 68px 0
         :not(:last-child)
             margin: 0 30px 0 0
 
     &__item
-        margin-bottom: 30px
         display: flex
         flex-direction: column
         padding: 50px 40px
@@ -428,10 +465,17 @@ body
             &:hover
                 cursor: pointer
                 background: #ffffff
-@media ( max-width: 651px )
+@media ( max-width: 767px )
     .contacts
+        &__title
+            margin: 40px 0 0 0
+        &__text
+            margin: 0 0 50px 0
         &__cards
             flex-direction: column
             align-items: center
+            margin: 0
             :not(:last-child)
                 margin: 0 0 30px 0
+        &__wrap
+            padding: 40px 0

@@ -19,10 +19,12 @@
 
     &__menu
         padding: 40px 0
+
 .menu
 
     &__list
         display: flex
+        flex-wrap: wrap
         :not(:last-child)
             margin-right: 21px
     &__item
@@ -34,3 +36,17 @@
             text-align: center
             letter-spacing: 0.2px
             color: #737373
+
+@media ( max-width: 992px )
+    .header
+        &__logo
+            margin-right: 40px
+    .menu
+
+        &__list
+
+            :not(:last-child)
+                margin-right: 15px
+        &__item
+            a
+                font-size: 18px

@@ -127,6 +127,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .menu__list :not(:last-child) {
   margin-right: 21px;
@@ -142,6 +144,18 @@ body {
   color: #737373;
 }
 
+@media (max-width: 992px) {
+  .header__logo {
+    margin-right: 40px;
+  }
+
+  .menu__list :not(:last-child) {
+    margin-right: 15px;
+  }
+  .menu__item a {
+    font-size: 18px;
+  }
+}
 .main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -205,6 +219,11 @@ body {
   color: white;
 }
 
+@media (max-width: 1250px) {
+  .content-top {
+    background-position: right;
+  }
+}
 @media (max-width: 385px) {
   .button {
     -webkit-box-orient: vertical;
@@ -256,14 +275,14 @@ body {
 }
 .services__title h1 {
   font-size: 24px;
-  line-height: 32px;
+  line-height: 133%;
   letter-spacing: 0.1px;
   color: #252B42;
 }
 .services__text p {
   font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 142%;
   letter-spacing: 0.2px;
   color: #737373;
 }
@@ -274,6 +293,7 @@ body {
   letter-spacing: 0.2px;
   color: #252B42;
   text-align: center;
+  margin: 0 0 15px 0;
 }
 
 .text-page {
@@ -327,6 +347,11 @@ body {
   color: #737373;
 }
 
+@media (max-width: 767px) {
+  .card {
+    margin-bottom: 40px;
+  }
+}
 .card__item {
   position: relative;
   overflow: hidden;
@@ -355,12 +380,17 @@ body {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .card__item {
+    min-height: 250px;
+  }
+}
 .footer-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 142px;
-  padding: 40px 0;
+  padding: 40px 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -498,31 +528,57 @@ body {
   height: 100%;
   width: 100%;
 }
-.inform__text {
+
+.content__text {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin-left: 9.5602294455%;
 }
 
-@media (max-width: 767px) {
-  .content {
+.text__wrap :not(:last-child) {
+  margin: 0 0 30px 0;
+}
+.list {
+  margin: 30px 0 0 0;
+}
+.list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 30px 0;
+}
+.list__logo {
+  width: 32px;
+  height: 32px;
+  margin: 0 20px 0 0;
+}
+.list__title {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.1px;
+  color: #252B42;
+}
+@media (max-width: 992px) {
+  .content__text {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 840px) {
+  .list {
+    margin: 20px 0 20px 0;
+  }
+
+  .inform {
+    padding: 50px 0;
+  }
+  .inform__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    margin: 50px 0 0 0;
   }
-}
-.list :not(:last-child) {
-  margin: 0 0 10px 0;
-}
-.list__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.list__logo {
-  margin-right: 20px;
 }
 .clients {
   padding: 50px 0;
@@ -580,6 +636,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #17213C;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -654,6 +711,9 @@ body {
             flex-direction: column;
     width: 100%;
   }
+  .subscribe__form input {
+    margin: 0 0 10px 0;
+  }
 }
 .contacts__title {
   margin: 80px 0 0 0;
@@ -677,6 +737,7 @@ body {
 }
 .contacts__wrap {
   min-height: 740px;
+  padding: 80px 0;
 }
 .contacts__cards {
   display: -webkit-box;
@@ -687,12 +748,12 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0 0 68px 0;
 }
 .contacts__cards :not(:last-child) {
   margin: 0 30px 0 0;
 }
 .contacts__item {
-  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,7 +819,13 @@ body {
   background: #ffffff;
 }
 
-@media (max-width: 651px) {
+@media (max-width: 767px) {
+  .contacts__title {
+    margin: 40px 0 0 0;
+  }
+  .contacts__text {
+    margin: 0 0 50px 0;
+  }
   .contacts__cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -767,8 +834,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin: 0;
   }
   .contacts__cards :not(:last-child) {
     margin: 0 0 30px 0;
+  }
+  .contacts__wrap {
+    padding: 40px 0;
   }
 }
