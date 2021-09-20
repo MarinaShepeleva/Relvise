@@ -708,6 +708,9 @@ body {
 }
 
 @media (max-width: 992px) {
+  .subscribe__submit {
+    border-radius: 5px;
+  }
   .subscribe__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
