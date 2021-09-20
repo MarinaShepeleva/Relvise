@@ -458,9 +458,15 @@ body {
   -ms-grid-column-span: 2;
   grid-column: span 2;
 }
-.footer-body__item h1 {
+.footer-body__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer-body__title h1 {
+  display: block;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 150%;
   letter-spacing: 0.1px;
   color: #FFFFFF;
   margin-bottom: 20px;
@@ -477,6 +483,15 @@ body {
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #FFFFFF;
+}
+
+.triangle {
+  margin: 5px 0 0 7px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 16px solid #ffff;
 }
 
 .footer-bottom {
