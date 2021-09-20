@@ -147,6 +147,7 @@ body {
 @media (max-width: 992px) {
   .header__logo {
     margin-right: 40px;
+    color: #000;
   }
 
   .menu__list :not(:last-child) {
@@ -154,6 +155,7 @@ body {
   }
   .menu__item a {
     font-size: 18px;
+    color: #000;
   }
 }
 .main {
@@ -225,6 +227,14 @@ body {
   }
 }
 @media (max-width: 385px) {
+  .content-top__title h1 {
+    font-size: 30px;
+    color: #000;
+  }
+  .content-top__text p {
+    color: #000;
+  }
+
   .button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
