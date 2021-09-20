@@ -28,7 +28,7 @@ body
     padding: 184px 0 0 0
 
     &__container
-
+        padding: 20px 10px
         :not(:last-child)
             margin-bottom: 35px
     &__title
@@ -76,13 +76,11 @@ body
 
 @media (max-width: 385px)
     .content-top
+        &__container
+            background-color: rgba(255, 255, 255, 0.7)
         &__title
             h1
                 font-size: 30px
-                color: #000
-        &__text
-            p
-                color: #000
     .button
         flex-direction: column
         :not(:last-child)
