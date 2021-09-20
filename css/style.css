@@ -535,7 +535,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.inform__video {
+
+.content__video {
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 57%;
@@ -543,14 +544,14 @@ body {
   padding: 0 0 42% 0;
   overflow: hidden;
 }
-.inform__video iframe {
+.content__video img {
   position: absolute;
   top: 0;
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .content__text {
